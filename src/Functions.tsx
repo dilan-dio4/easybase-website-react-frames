@@ -24,7 +24,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 export default function Function() {
     const [files, setFiles] = useState<Record<string, Container.IFunctionFile>>();
     const [selectedFileName, setSelectedFileName] = useState<string>("");
-    const [treeWidth, setTreeWidth] = useState<number>(214);
+    const [treeWidth, setTreeWidth] = useState<number>(250);
     const [widthDeltaTracker, setWidthDeltaTracker] = useState<number>();
     const [addFileDialog, setAddFileDialogOpen] = useState<boolean>(false);
     const [isFile, setIsFile] = useState<boolean | undefined>(undefined); // false means it's a folder
