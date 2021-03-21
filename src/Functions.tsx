@@ -265,6 +265,7 @@ export default function Function() {
                         className={classes.fileTreeRoot}
                         requestChildrenData={(data, path, toggleFoldStatus) => Container.requestChildrenData(data, path, toggleFoldStatus, changeFileCallback)}
                         actionsAlignRight
+                        unfoldAll
                     />
                     <div className={classes.borderOverwriter}></div>
                     <div className={classes.borderOverwriter} style={{ bottom: -1, top: "inherit" }}></div>
