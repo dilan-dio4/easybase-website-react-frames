@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/easybase-website-react-frames/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/easybase-website-react-frames/static/js/main.7bcf584d.chunk.js",
+    "main.js.map": "/easybase-website-react-frames/static/js/main.7bcf584d.chunk.js.map",
+    "runtime-main.js": "/easybase-website-react-frames/static/js/runtime-main.bde6dc4b.js",
+    "runtime-main.js.map": "/easybase-website-react-frames/static/js/runtime-main.bde6dc4b.js.map",
+    "static/js/2.cdb3bd7b.chunk.js": "/easybase-website-react-frames/static/js/2.cdb3bd7b.chunk.js",
+    "static/js/2.cdb3bd7b.chunk.js.map": "/easybase-website-react-frames/static/js/2.cdb3bd7b.chunk.js.map",
+    "static/js/3.65038855.chunk.js": "/easybase-website-react-frames/static/js/3.65038855.chunk.js",
+    "static/js/3.65038855.chunk.js.map": "/easybase-website-react-frames/static/js/3.65038855.chunk.js.map",
+    "index.html": "/easybase-website-react-frames/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/easybase-website-react-frames/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.cdb3bd7b.chunk.js.LICENSE.txt": "/easybase-website-react-frames/static/js/2.cdb3bd7b.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/easybase-website-react-frames/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bde6dc4b.js",
+    "static/js/2.cdb3bd7b.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.7bcf584d.chunk.js"
+  ]
+}
