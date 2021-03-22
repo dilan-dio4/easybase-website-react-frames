@@ -27,6 +27,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { useDropzone } from 'react-dropzone';
 import { useInfoStyles } from './utils';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx';
@@ -373,12 +374,19 @@ export const TestingAccordion = ({ route }: { route: string }) => {
     const [wrapOutput, setWrapOutput] = useState<boolean>(false);
     const [waitingForResponse, setWaitingForResponse] = useState<boolean>(false);
 
+    const [tooltipOpen, setTooltipOpen] = useState<boolean>(false);
+
     const handleGoClick = async () => {
         setWaitingForResponse(true)
         const funcResponse = await axios.post(`https://api.easybase.io/testFunction`, postBody);
         setWaitingForResponse(false);
         setOutput(typeof funcResponse.data === "object" ? JSON.stringify(funcResponse.data) : funcResponse.data);
     }
+
+    useEffect(() => {
+        setTimeout(() => setTooltipOpen(true), 2500);
+        setTimeout(() => setTooltipOpen(false), 10000);
+    }, [])
 
     useEffect(() => {
         if (toggleViewValue === 2) {
@@ -393,8 +401,8 @@ export const TestingAccordion = ({ route }: { route: string }) => {
     }, [toggleViewValue]);
 
     return (
-        <Accordion square TransitionProps={{ mountOnEnter: true }}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Accordion square TransitionProps={{ mountOnEnter: true }} onChange={(_: React.ChangeEvent<{}>, expanded: boolean) => expanded && setTooltipOpen(false)}>
+            <AccordionSummary expandIcon={<Tooltip title={<Typography variant="subtitle2">Try me!</Typography>} arrow placement="left" open={tooltipOpen}><ExpandMoreIcon /></Tooltip>}>
                 <Typography variant="h6" className="d-flex align-items-center"><BuildIcon className="mr-1 pr-1" />Deploy</Typography>
             </AccordionSummary>
             <AccordionDetails className="d-flex align-items-center flex-column mx-5 mb-4">
