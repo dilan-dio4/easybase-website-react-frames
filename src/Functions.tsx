@@ -270,12 +270,12 @@ export default function Function() {
                     <div className={classes.borderOverwriter}></div>
                     <div className={classes.borderOverwriter} style={{ bottom: -1, top: "inherit" }}></div>
                 </Resizable>
-                <div style={{ width: `calc(100vw - ${treeWidth}px)`, maxWidth: `calc(100vw - ${treeWidth}px)` }}>
+                <div style={{ width: `calc(100vw - ${treeWidth}px)`, maxWidth: `calc(100vw - ${treeWidth}px)`, maxHeight: 850 - 156, height: 850 - 156 }}>
                     <div className="d-flex align-items-center justify-content-center" style={{ ...panelStyle, height: Container.headerHeight, borderRight: "none !important" }}>
                         <Typography variant="subtitle2">{selectedFileName || "No file selected"}</Typography>
                     </div>
                     <Editor
-                        height={`calc(100vh - ${Container.headerHeight * 2}px)`}
+                        height={`calc(850px - 156px - ${Container.headerHeight * 2}px)`}
                         defaultLanguage={files[selectedFileName]?.language}
                         defaultValue={selectedFileName !== "" ? files[selectedFileName]?.data : ""}
                         onMount={onMonacoMount}

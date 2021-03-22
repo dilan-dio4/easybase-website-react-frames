@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 function App() {
   return (
-    <div style={{ height: 850 }}>
+    <div style={{ height: 850, overflow: 'hidden' }}>
       <ThemeProvider theme={theme}>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
         <CssBaseline />
